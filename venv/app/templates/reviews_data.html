@@ -1,0 +1,12 @@
+{% from 'render_field.html' import render_field %}
+{% extends "base.html" %}
+{% block title %} Відправлені відгуки {% endblock %}
+{% block content %}
+<h1>Відгуки:</h1>
+<br>
+<ul>
+    {% for data in dataReviews %}
+        <p>{{ data.name }}: {{ data.text }}</p>
+    {% endfor %}
+</ul>
+{% endblock %}
